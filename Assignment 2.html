@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Sign up--Kickstarter</title>
+		<link href="C:\Users\acer\Desktop\htmlArghya\CSS\kickstarter.css" rel="stylesheet" type="text/css">
+		<link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">	
+			<script>
+			function JSFunction() {
+			var name = document.myJS.name.value;
+			var email = document.myJS.email.value;
+			var remail = document.myJS.remail.value;
+			var pass = document.myJS.pass.value;
+			var rpass = document.myJS.rpass.value;
+			var check = document.myJS.check.checked;
+			if(name==null || name=="") {
+				alert("Name cannot be empty");
+				return false;
+				}
+			else if(email==null || email=="") {
+				alert("Email cannot be empty");
+				return false;
+				}
+			else if(email!=remail) {
+				alert("Email does not match");
+				return false;
+				}
+			else if(pass.length<6) {
+				alert("Password must be atleast 6 characters long");
+				return false;
+				}
+			else if(pass!=rpass) {
+				alert("Password does not match");
+				return false;
+				}
+			else if(check==false) {
+				alert("Please accept the Terms & Conditions");
+				return false;
+				}
+			else
+				return true;
+			}
+		</script>
+	</head>
+	<body>
+	<div id="header">
+		KICKSTARTER
+			</div>
+		<div id="boxed">
+			<h4 id="header" align="center">Have an account?<a href="2.html"> Log in</h4></a>
+			<h2 id="title">Sign up</h2>
+				<form name="myJS"  onsubmit="JSFunction()">
+					<input name="name" type="text" id="input" placeholder="Name"><br><br>
+					<input name="email" type="email" id="input" placeholder="Email"><br><br>
+					<input name="remail" type="email" id="input" placeholder="Re-enter email"><br><br>
+					<input name="pass" type="password" id="input" placeholder="Password"><br><br>
+					<input name="rpass" type="password" id="input" placeholder="Re-enter password"><br><br>
+					<input name="check" type="checkbox" id="terms">&nbsp;&nbsp;Terms & Conditions<br>
+				<button type="submit" value="submit">Create account</button>
+				</form>
+			<div id="text">
+				By signing up, you agree to our terms of use, privacy policy, and cookie policy. Our policies explain how we use your data to deliver, improve, and promote our service and our site, and how you can exercise your rights to control that use.
+			</div>
+		</div>
+		
+	</body>
+</html>
